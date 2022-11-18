@@ -16,7 +16,8 @@ both IPv4 and IPv6 backbones are serviced with ACLs from service ports only, and
 - [5] Application of dynamic routing to networks with IPv6 by OSPF.
 - [6] Both IPv4 and IPv6 backbones will only serve from service ports with ACLs. All other ports will remain closed.
 
-
+Here is a general view of the my network.
+![General View](media/0001_general.png)
 
 ### Phase 1 Steps
 
