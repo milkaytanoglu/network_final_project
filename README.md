@@ -17,7 +17,9 @@ both IPv4 and IPv6 backbones are serviced with ACLs from service ports only, and
 - [6] Both IPv4 and IPv6 backbones will only serve from service ports with ACLs. All other ports will remain closed.
 
 
+
 ### Phase 1 Steps
+
 #### Router 0 
 ```sh
 int fa0/0
@@ -74,10 +76,23 @@ no sh
 ip add 192.168.3.1 255.255.255.0
 no sh
 ```
+
+- [x] Internal connection (192.168.3.0)
+- [ ] External connection (13.0.0.0)
+
+```sh
+int s0/0/0
+ip add 13.0.0.2 255.255.255.252
+no sh
+```
+
+- [x] Internal connection (192.168.3.0)
+- [x] External connection (13.0.0.0)
+
 Let's not forget to do the ping tests.
 
 ### Phase 2 Steps
-#### [Router 0] xxx
+#### Router 0 xxx
 ```sh
 router ospf 1
 network 192.168.1.0 0.0.0.255 area 0
